@@ -309,7 +309,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-left: 16px;
   padding-top: 8px;
   position: relative;
 }
