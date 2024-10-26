@@ -521,6 +521,7 @@ img {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-form-text {
@@ -537,39 +538,41 @@ img {
   border-radius: 4px;
   width: 264px;
   height: 40px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  padding: 8px 16px;
+  padding-left: 16px;
   margin-right: 24px;
 }
 
 .footer-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
   color: #ffffff;
 }
 
 .footer-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: center;
   color: #ffffff;
+  cursor: pointer;
   background-color: #4d5ae5;
   border-radius: 4px;
   border: none;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
 }
 
 .footer-btn-icon {
+  margin-left: 16px;
   fill: #ffffff;
 }
 
@@ -608,7 +611,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -619,18 +622,20 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   padding: 0;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
   color: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon:hover,
@@ -641,6 +646,7 @@ img {
 .modal-open:hover,
 .modal-open:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-title {
@@ -655,7 +661,7 @@ img {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -664,7 +670,7 @@ img {
 
 .modal-input {
   width: 100%;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   height: 40px;
   background-color: transparent;
@@ -688,23 +694,28 @@ img {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .modal-icon {
   position: absolute;
-  left: 20px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   width: 100%;
   height: 120px;
   resize: none;
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba (46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
   outline: transparent;
@@ -717,14 +728,15 @@ img {
 }
 
 .modal-textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
   color: #2e2f4278;
 }
 
+.modal-check-container {
+  margin-bottom: 24px;
+}
+
 .modal-check-text {
+  color: #8e8f99;
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
@@ -737,25 +749,32 @@ img {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-check-text span {
   background-color: #404bbf;
   border-radius: 2px;
-  border: 1px solid #404bbf;
+  border: none;
   fill: #f4f4fd;
+}
+
+.modal-privacy {
+  color: #4d5ae5;
 }
 
 .modal-btn {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   font-weight: 500;
   font-size: 16px;
@@ -763,11 +782,13 @@ img {
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
-  text-align: center;
+  cursor: pointer;
+  border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   display: block;
   align-items: center;
   margin-top: 24px;
   margin-right: auto;
   margin-left: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
