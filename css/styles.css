@@ -638,10 +638,15 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-icon:hover,
-.close-icon:focus {
+.modal-open:hover svg,
+.modal-open:focus svg {
   fill: #ffffff;
 }
+
+/* .close-icon:hover,
+.close-icon:focus {
+  fill: #ffffff;
+} */
 
 .modal-open:hover,
 .modal-open:focus {
@@ -660,7 +665,7 @@ img {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -744,17 +749,13 @@ img {
   align-items: center;
 }
 
-.user-privacy-accent {
-  display: inline-flex;
-}
-
 .modal-check-text span {
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
